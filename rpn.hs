@@ -15,7 +15,7 @@ rpn (x:xs) stack
 
 apply :: String -> [String] -> [String]
 apply _  []       = []
-apply _ [a]       = [a]
+apply _  [a]      = [a]
 apply op (a:b:xs)
     | binary op   = (show $ operator op (read a) (read b)) : xs
     | otherwise   = []
